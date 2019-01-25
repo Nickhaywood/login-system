@@ -73,16 +73,10 @@ function username_exists($username){
 }
 
 
-
-
-
-
-
-
 function validate_user_registration(){
 
   $errors =[];
-   $min = 3;
+  $min = 3;
   $max = 20;
   
   
@@ -111,11 +105,40 @@ function validate_user_registration(){
       $errors[] = "first name cannot be more than {$max} characters <br>";
       
       }
+      
       if(strlen($last_name) > $max){
         $errors[] = "Last name cannot be more than {$max} characters <br>";
         
       }
 
+      if(strlen($username) < $min){
+        $errors[] = "username must be more than {$min} characters <br>";
+        
+      }
+
+      if(strlen($username) > $max){
+        $errors[] = "username cannot be more than {$max} characters <br>";
+        
+      }
+
+      if(email_exists($email)){
+        $errors[] = "sorry that email is already registered";
+
+      }
+
+      if(username_exists($username)){
+        $errors[] = "sorry that username is already registered";
+
+      }
+
+     
+     
+     
+     
+     
+     
+     
+     
       if($password !== $confirm_password){
 
         $errors[] = "password dont match!";

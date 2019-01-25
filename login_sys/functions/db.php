@@ -5,7 +5,7 @@ $con = mysqli_connect('localhost','root','Yahweh1!','login_db');
 
 function row_count($result){
 
-  return mysqli_num_rows($results);
+  return mysqli_num_rows($result);
 }
 
 
