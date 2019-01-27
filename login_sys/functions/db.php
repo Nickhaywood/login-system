@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('localhost','root','Yahweh1!','login_db');
+$con = mysqli_connect('localhost','root','','login_db');
 
 
 
