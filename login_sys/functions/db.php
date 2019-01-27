@@ -12,7 +12,7 @@ function row_count($result){
 
 function escape($string){
   global $con;
-  mysqli_real_esacpae($con,$string);
+  return mysqli_real_escape_string($con,$string);
 }
 
 
